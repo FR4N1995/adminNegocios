@@ -1,0 +1,94 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.modal{
+    position: absolute;
+    background-color: rgb(0, 0, 0 , .8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    &__imagen{
+        width: 20rem;
+        height: 20rem;
+        background-size: cover
+    }
+    &__btncerrar{
+        @include m.boton(v.$rojo, v.$blanco);
+    }
+
+    &__nombre,
+    &__precio,
+    &__disponible,
+    &__asunto{
+        font-weight: 700;
+        span{
+            font-weight: 300;
+        }
+    }
+    &__contenedorEstado{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__estado{
+
+        &-completada{
+            background-color: v.$azul;
+            color: v.$blanco;
+            //  width: 12rem;
+            border: none;
+            font-size: 1.5rem;
+            padding: 1.2rem 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 1rem;
+           
+            display: flex;
+            justify-content: center;
+        }
+        &-pendiente{
+            background-color: v.$naranja;
+            color: v.$blanco;
+            border: none;
+            font-size: 1.5rem;
+            padding: 1.2rem 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 1rem;
+        }
+    }
+
+
+ // clases para mostrar y cerrar el modal
+ .contenedorModal{
+    max-width: 60rem;
+    background-color: v.$blanco;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(-30rem);
+    transition-property: all;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    border-radius: 1rem;
+   
+    &.animar{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        
+    }
+
+    &.cerrarModal{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+ }
+
+   
+}

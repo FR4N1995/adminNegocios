@@ -1,0 +1,99 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+
+    &__formulario{
+
+        &--estado{
+            padding: .5rem 2rem;
+            border-bottom: 2px solid darken($color: v.$gris, $amount: 5%);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            &:last-of-type{
+            border: none;
+             }
+        }
+    }
+
+    &__thead{
+        background-color: v.$gris-oscuro;
+        color: v.$blanco;
+    }
+
+    &__th {
+        padding: 1rem;
+        text-align: left;
+    }
+
+    &__tr{
+        &:nth-last-of-type(even){
+            background-color: v.$gris-claro;
+        }
+    }
+
+    &__td{
+        padding: 1.5rem 1rem;
+        
+        &--confirmacion{
+            color: v.$azul;
+            font-weight: 700
+            
+        }
+        &--noconfirmacion{
+            color: v.$rojo;
+            font-weight: 700
+        }
+
+        &--acciones{
+            @extend .table__td;
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            align-items: center;
+        }
+    }
+    &__accion{
+        //all: unset = Este elimina todos los estilos Predeterminados de un elemento
+        all: unset;
+        text-transform: uppercase;
+        // font-size: 1.4rem;
+        font-weight: v.$bold;
+        cursor: pointer;
+
+        &--completada{
+            background-color: v.$azul;
+            color: v.$blanco;
+            border: none;
+            font-size: .9rem;
+            padding: .5rem 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 1rem;
+        }
+
+        &--pendiente{
+            background-color: v.$naranja;
+            color: v.$blanco;
+            border: none;
+            font-size: .9rem;
+            padding: .5rem 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 1rem;
+        }
+
+        &--editar{
+            color: v.$azul;
+        }
+        &--ver{
+            color: v.$verde;
+        }
+        &--eliminar{
+            color: v.$rojo;
+        }
+    }
+}

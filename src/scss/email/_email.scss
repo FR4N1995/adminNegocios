@@ -1,0 +1,11 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.email{
+    @include m.contenedor;
+
+    a{
+        @include m.boton(v.$blanco, v.$negro);
+        
+    }
+}

@@ -1,0 +1,57 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.auth{
+   @include m.contenedor-sm;
+
+ 
+    &__texto{
+        text-align: center;
+    }
+    &__grid{
+        display: none;
+        
+    }
+
+    &__tabs{
+        @include m.contenedor-sm;
+        margin-bottom: 3rem;
+        @include m.tablet{
+            display: flex;
+        }
+        button{
+            background-color: v.$verde;
+            border: none;
+            color: v.$blanco;
+            padding: 1rem;
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: v.$bold;
+            transition: background-color 300ms ease;
+    
+            &:hover{
+                cursor: pointer;
+                background-color: darken($color: v.$verde, $amount: 10%);
+            }
+    
+            &.actual{
+                background-color: v.$blanco;
+                border: 1px solid;
+                color: v.$verde;
+            }
+        }
+
+    }
+
+}
+
+.mostrarLogin{
+    @include m.contenedor;
+         @include m.grid(1, 3rem);
+        @include m.tablet{
+            // @include m.grid(3, 3rem);
+            align-items: flex-start;
+        }
+}
