@@ -49,7 +49,10 @@ class Router
         $contenido = ob_get_clean(); // Limpia el Buffer
 
         //utilizar el layout de acurdo a la url
-        $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
+        //$currentUrl = $_SERVER['PATH_INFO'] ?? '/';
+
+	//prod
+	$currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
 
         if (str_contains($currentUrl, '/admin')) {
             include_once __DIR__ . '/views/admin-layout.php';
