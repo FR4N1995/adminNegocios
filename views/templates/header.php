@@ -64,7 +64,7 @@
 </div>
 <nav class="movil__navegacion">
     <a href="/paquetes" class="navegacion__enlace <?php echo pagina_actual('/paquetes') ? 'navegacion__enlace--actual' : ''; ?>">Paquetes</a>
-    <a href="/instrucciones" class="navegacion__enlace <?php echo pagina_actual('/instrucciones') ? 'navegacion__enlace--actual' : ''; ?>">Preguntas Frecuentes</a>
-    <a href="/instrucciones" class="navegacion__enlace <?php echo pagina_actual('/blog') ? 'navegacion__enlace--actual' : ''; ?>">Blog</a>
+    <a href="/preguntasFrecuentes" class="navegacion__enlace <?php echo pagina_actual('/preguntasFrecuentes') ? 'navegacion__enlace--actual' : ''; ?>">Preguntas Frecuentes</a>
+    <a href="/blog" class="navegacion__enlace <?php echo pagina_actual('/blog') ? 'navegacion__enlace--actual' : ''; ?>">Blog</a>
 
 </nav>
