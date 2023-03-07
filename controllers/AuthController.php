@@ -30,7 +30,7 @@ class AuthController{
                     if (password_verify($_POST['password'], $usuarios->password)) {
                         //La contraseña es correcta y existe el usuario
                         //Ahora iniciamos session del usuario
-                        session_start();
+                     //   session_start();
                         //llenamos el arreglo de session con datos del usuario
                         //como si id, nombre etc
                         $_SESSION['id'] = $usuarios->id;
@@ -194,7 +194,7 @@ class AuthController{
     }
 
     public static function logout(){
-        session_start();
+        //session_start();
         $_SESSION = [];
         header('Location: /');
     }
