@@ -26,18 +26,22 @@ class Email{
         $mail = new PHPMailer();
         $mail->isSMTP();
         $mail->Host = 'smtp.mailtrap.io';
+        // $mail->Host = 'in-v3.mailjet.com';
         // $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
         // $mail->Port = 587;
+        $mail->Port = 2525;
+        
         $mail->Username = 'db967d856c3a71';
-        // $mail->Username = 'pruebaskha@gmail.com';
+        // $mail->Username = '6b2805f5d2aff34212c0e8166973c114';
+        
          $mail->Password = '0b22321b04704b';
-        // $mail->Password = 'vraqarmjrnmflwgj';
+        //  $mail->Password = '755364bb389be5867d7a3c0f70d75b60';
+        
         $mail->SMTPSecure = 'tls';
 
-        $mail->setFrom('cuentas@uptask.com');
-        $mail->addAddress($this->email, 'uptask.com');
+        $mail->setFrom('fran7paco10@gmail.com', 'AdminNegocios');
+        $mail->addAddress($this->email, 'usuario');
         $mail->Subject = 'confirma tu cuenta';
 
         //set html

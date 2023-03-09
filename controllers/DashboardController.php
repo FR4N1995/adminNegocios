@@ -30,13 +30,13 @@ class DashboardController
              header('Location: /finalizar-registro');
          }
         //Productos menos Disponibles
-        $prodMenosDisp = Productos::ordenarLimite('disponible', 'ASC', 5);
+        $prodMenosDisp = Productos::ordenarLimite('disponible', 'usuario_id', $id, 'ASC', 5);
         //Productos mas diponibles
-        $prodMasDisp = Productos::ordenarLimite('disponible', 'DESC', 5);
+        $prodMasDisp = Productos::ordenarLimite('disponible', 'usuario_id', $id, 'DESC', 5);
         //Ultimas citas agregadas
-        $ultimasCitas = Citas::ordenarLimite('fecha', 'DESC', 5);
+         $ultimasCitas = Citas::ordenarLimite('fecha', 'usuario_id', $id,  'DESC', 5);
         //Ultimas ventas agregadas
-        $ultimasVentas = Ventas::ordenarLimite('fecha', 'DESC', 5);
+         $ultimasVentas = Ventas::ordenarLimite('fecha', 'ventasusuario_id', $id,  'DESC', 5);
         //problema si el usuario contrata el paquete completo y solo agrega un solo empleado
         //lo mejor sera meter un if y ver 
         if ($registro[0]->paquete_id === '1' ) {

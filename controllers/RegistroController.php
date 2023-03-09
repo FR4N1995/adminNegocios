@@ -84,7 +84,7 @@ class RegistroController
 
             try {
                 $registro = new Registro($datos);
-                debuguear($registro);
+                // debuguear($registro);
                 $resultado = $registro->guardar();
                 echo json_encode($resultado);
             } catch (\Throwable $th) {
