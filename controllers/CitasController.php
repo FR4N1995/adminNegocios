@@ -16,10 +16,10 @@ class CitasController{
         $pagina_actual = $_GET['page'];
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
         $bandera = true;
-        if (!$pagina_actual || $pagina_actual < 1 ) {
-            header('Location: /admin/citas?page=1');
-        }
-        $registros_por_pagina = 10;
+        // if (!$pagina_actual || $pagina_actual < 1 ) {
+        //     header('Location: /admin/citas?page=1');
+        // }
+        // $registros_por_pagina = 10;
 
         $total = Citas::total('usuario_id', $_SESSION['id']);
 
