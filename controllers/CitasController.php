@@ -23,9 +23,10 @@ class CitasController{
 
         $total = Citas::total('usuario_id', $_SESSION['id']);
 
-        $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
+        // $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
 
-        $citas = Citas::paginarWhere('usuario_id', $_SESSION['id'], $registros_por_pagina, $paginacion->offset());
+        // $citas = Citas::paginarWhere('usuario_id', $_SESSION['id'], $registros_por_pagina, $paginacion->offset());
+        $citas = Citas::all('usuario_id', $_SESSION['id'], $registros_por_pagina);
         $registroExistente = Registro::wherearray(['usuarioid' => $_SESSION['id'], 'activo' => '1']);
 
         if ($registroExistente) {
@@ -42,7 +43,7 @@ class CitasController{
             'titulo' => 'Citas/Compromisos',
             'citas' => $citas,
             'bandera' => $bandera,
-            'paginacion' => $paginacion->paginacion(),
+            // 'paginacion' => $paginacion->paginacion(),
             'nombre' => $_SESSION['nombre'],
             'admin' => $_SESSION['admin'],
             'superAdmin' => 0

@@ -25,7 +25,7 @@ class ProductosController
   //          header('Location: /admin/productos?page=1');
     //    }
         //$registros_por_pagina = 10;
-        //$total = Productos::total('usuario_id', $_SESSION['id']);
+        $total = Productos::total('usuario_id', $_SESSION['id']);
         //$paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
         $productos = Productos::all('usuario_id', $_SESSION['id'],);
         $registroExistente = Registro::wherearray(['usuarioid' => $_SESSION['id'], 'activo' => '1']);
