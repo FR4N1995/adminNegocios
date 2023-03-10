@@ -59,7 +59,9 @@ function isSuperAdmin(): bool {
 
 // }
 function pagina_actual($path){
-    return str_contains($_SERVER['PATH_INFO'] ?? '/', $path) ? true : false;
+    //$currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+    //return str_contains($_SERVER['PATH_INFO'] ?? '/', $path) ? true : false;
+    return str_contains($_SERVER['REQUEST_URI'] ?? '/',$path) ? true : false;
 }
 //Funcion para que tome una animacion
 function aos_animacion() {

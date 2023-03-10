@@ -2,6 +2,8 @@
 session_start();
 ?>
 <?php
+echo $_SERVER['QUERY_STRING'];
+echo $REQUEST_URI;
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\ApiController;

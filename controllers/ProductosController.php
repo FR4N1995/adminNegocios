@@ -21,13 +21,13 @@ class ProductosController
         $pagina_actual = $_GET['page'];
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
         $bandera = true;
-        if (!$pagina_actual || $pagina_actual < 1) {
-            header('Location: /admin/productos?page=1');
-        }
-        $registros_por_pagina = 10;
-        $total = Productos::total('usuario_id', $_SESSION['id']);
-        $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
-        $productos = Productos::paginarWhere('usuario_id', $_SESSION['id'], $registros_por_pagina, $paginacion->offset());
+//        if (!$pagina_actual || $pagina_actual < 1) {
+  //          header('Location: /admin/productos?page=1');
+    //    }
+        //$registros_por_pagina = 10;
+        //$total = Productos::total('usuario_id', $_SESSION['id']);
+        //$paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
+        $productos = Productos::all('usuario_id', $_SESSION['id'],);
         $registroExistente = Registro::wherearray(['usuarioid' => $_SESSION['id'], 'activo' => '1']);
 
         if ($registroExistente) {
@@ -43,7 +43,7 @@ class ProductosController
         $router->render('admin/productos/index', [
             'titulo' => 'Productos',
             'productos' => $productos,
-            'paginacion' => $paginacion->paginacion(),
+          //  'paginacion' => $paginacion->paginacion(),
             'bandera' => $bandera,
             'nombre' => $_SESSION['nombre'],
             'admin' => $_SESSION['admin'],
