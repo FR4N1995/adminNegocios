@@ -8,13 +8,18 @@
     &__formulario{
 
         &--estado{
-            padding: .5rem 2rem;
+            padding: .5rem .3rem;
+           
             border-bottom: 2px solid darken($color: v.$gris, $amount: 5%);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
             &:last-of-type{
             border: none;
+             }
+
+             @include m.tablet {
+                padding: .5rem 2rem;
              }
         }
     }
@@ -36,7 +41,10 @@
     }
 
     &__td{
-        padding: 1.5rem 1rem;
+       padding: 0;
+        @include m.tablet{
+            padding: 1.5rem 1rem;
+        }
         
         &--confirmacion{
             color: v.$azul;
@@ -49,7 +57,10 @@
         }
 
         &--acciones{
-            @extend .table__td;
+            @include m.tablet{
+                //  @extend .table__td;
+                padding: 1.5rem 1rem;
+            }
             display: flex;
             justify-content: flex-end;
             gap: 2rem;
@@ -63,27 +74,33 @@
         // font-size: 1.4rem;
         font-weight: v.$bold;
         cursor: pointer;
-
+        
+        
         &--completada{
             background-color: v.$azul;
             color: v.$blanco;
             border: none;
             font-size: .9rem;
-            padding: .5rem 1rem;
+            padding: .3rem 1rem;
             text-transform: uppercase;
             font-weight: 700;
             border-radius: 1rem;
+            @include m.tablet{
+                padding: .5rem .8rem;
+            }
         }
-
         &--pendiente{
             background-color: v.$naranja;
             color: v.$blanco;
             border: none;
             font-size: .9rem;
-            padding: .5rem 1rem;
+            padding: .3rem 1rem;
             text-transform: uppercase;
             font-weight: 700;
             border-radius: 1rem;
+            @include m.tablet{
+                padding: .5rem 1rem;
+            }
         }
 
         &--editar{
