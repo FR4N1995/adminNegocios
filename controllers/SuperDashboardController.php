@@ -33,7 +33,7 @@ class SuperDashboardController
         $ingresos = ($basico * 200) + ($normal * 400) + ($completo * 600) + ($basicoAnual * 2000) + ($normalAnual * 4400) + ($completoAnual * 6500);
         //  debuguear($completo);
         //Ultimos registros
-        $lastRegistros = Registro::ordenarLimite('id', 'DESC', 5);
+        $lastRegistros = Registro::ordenarLimite('id', 'id', $_SESSION['id'], 'DESC', 5);
 
         foreach ($lastRegistros as $lastRegistro) {
             $lastRegistro->paquete = Paquetes::find($lastRegistro->paquete_id);
