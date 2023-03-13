@@ -23,9 +23,9 @@
         <div class="formulario__imagen">
 
         <picture>
-            <source srcset="<?php echo 'http://localhost:3000'. '/img/products/' . $productos->imagen; ?>.webp" type="image/webp">
-            <source srcset="<?php echo 'http://localhost:3000'. '/img/products/' . $productos->imagen; ?>.png" type="image/png">
-            <img src="<?php echo 'http://localhost:3000'. '/img/products/' . $productos->imagen; ?>.png" alt="imagen Ponente">
+            <source srcset="<?php echo 'https://admindenegocios.com/img/products/' . $productos->imagen; ?>.webp" type="image/webp">
+            <source srcset="<?php echo 'https://admindenegocios.com/img/products/' . $productos->imagen; ?>.png" type="image/png">
+            <img src="<?php echo 'https://admindenegocios.com/img/products/' . $productos->imagen; ?>.png" alt="imagen Ponente">
         </picture>
             
         </div>

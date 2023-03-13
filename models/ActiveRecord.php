@@ -159,8 +159,8 @@ class ActiveRecord{
          $existeArchivo = file_exists(CARPETAS_IMAGENES . $this->imagen . ".png");
         //  debuguear($existeArchivo);
          if ($existeArchivo) {
-             unlink(CARPETAS_IMAGENES . $this->imagen . ".png");
-             unlink(CARPETAS_IMAGENES . $this->imagen . ".webp");
+//             unlink(CARPETAS_IMAGENES . $this->imagen . ".png");
+  //           unlink(CARPETAS_IMAGENES . $this->imagen . ".webp");
 
          }
         //    debuguear($existeArchivo);
