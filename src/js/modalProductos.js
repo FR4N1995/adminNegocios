@@ -30,9 +30,9 @@ if (verProductos) {
        <form class="contenedorModal"> 
            <div class="campo"> 
                <picture>
-                   <source class="modal__imagen" srcset="http://localhost:3000/img/products/${producto.imagen}.webp" type="image/webp">
-                   <source class="modal__imagen" srcset="http://localhost:3000/img/products/${producto.imagen}.png" type="image/png">
-                   <img class="modal__imagen" src="http://localhost:3000/img/products/${producto.imagen}.png" alt="imagen Ponente">
+                   <source class="modal__imagen" srcset="https://admindenegocios.com/img/products/${producto.imagen}.webp" type="image/webp">
+                   <source class="modal__imagen" srcset="https://admindenegocios.com/img/products/${producto.imagen}.png" type="image/png">
+                   <img class="modal__imagen" src="https://admindenegocios.com/img/products/${producto.imagen}.png" alt="imagen Ponente">
                </picture>
            <div>
    
