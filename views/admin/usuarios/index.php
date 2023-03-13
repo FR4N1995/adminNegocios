@@ -40,7 +40,7 @@
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="/admin/usuarios/editar?id=<?php echo $empleado->id; ?>">
                                 <i class="fa-solid fa-pencil"></i>
-                                
+                                Editar
                             </a>
                             <form method="POST" action="/admin/usuarios/eliminar" class="table__formulario">
                                 <input type="hidden" name="id" value="<?php echo $empleado->id; ?>">

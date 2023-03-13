@@ -43,17 +43,17 @@
                         <td class="table__td--acciones">
                             <button class="table__accion table__accion--ver" value="<?php echo $cita->id; ?>" id="vercita">
                                 <i class="fa-regular fa-eye"></i>
-                                ver
+                                Ver
                             </button>
                             <a class="table__accion table__accion--editar" href="/admin/citas/editar?id=<?php echo $cita->id; ?>">
                                 <i class="fa-solid fa-pencil"></i>
-
+                                    Editar
                             </a>
                             <form method="POST" action="/admin/citas/eliminar" class="table__formulario">
                                 <input type="hidden" name="id" value="<?php echo $cita->id; ?>">
                                 <button type="submit" class="table__accion table__accion--eliminar">
                                     <i class="fa-solid fa-trash"></i>
-
+                                   
                                 </button>
                             </form>
 

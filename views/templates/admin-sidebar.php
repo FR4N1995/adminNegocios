@@ -1,7 +1,10 @@
 <aside class="dashboard__sidebar">
 
     <div class="dashboard__sidebar-contenedor">
-        <img class="dashboard__logo" src="/build/img/avalos murillo-blanco.png" alt="">
+        <a href="/">
+            <img class="dashboard__logo" src="/build/img/avalos murillo-blanco.png" alt="">
+        </a>
+
         <div class="dashboard__sidebar-cerrar-menu">
             <h1 id="cerrar-menu"><i class="fa-regular fa-circle-xmark"></i></h1>
         </div>
@@ -46,7 +49,7 @@
             </a>
             <a href="/superadmin/usuariosadmin" class="dashboard__enlace <?php echo pagina_actual('/usuariosadmin') ? 'dashboard__enlace--actual' : ''; ?>">
                 <i class="fa-solid fa-users dashboard__icono"></i>
-                
+
                 <span class="dashboard__menu-texto">Usuarios</span>
             </a>
             <a href="/superadmin/registrados" class="dashboard__enlace <?php echo pagina_actual('/registrados') ? 'dashboard__enlace--actual' : ''; ?>">
@@ -79,8 +82,13 @@
 
         </nav>
     <?php } ?>
+
+
     <div class="dashboard__cerrarsesion-mobile">
-        <a href="/logout" class="dashboard__mobile-btncerrarsesion">Cerrar Sesion</a>
+        <!-- <a href="/logout" class="dashboard__mobile-btncerrarsesion">Cerrar Sesion</a> -->
+            <form method="POST" action="/logout" class="header__form">
+                    <input type="submit" value="Cerrar Sesion" class="dashboard__mobile-btncerrarsesion">
+            </form>
     </div>
 
 </aside>

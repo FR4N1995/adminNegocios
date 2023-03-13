@@ -248,8 +248,8 @@ class ActiveRecord{
     }
 
     //retornar por un orden y un limite
-    public static function ordenarLimite($columna, $orden, $limite){
-        $query = " SELECT * FROM " . static::$tabla . " ORDER BY ${columna} ${orden} LIMIT ${limite} ";
+    public static function ordenarLimite($columna, $columOrder, $valor, $orden, $limite){
+        $query = " SELECT * FROM " . static::$tabla . " WHERE ${columOrder} LIKE ${valor}" . " ORDER BY ${columna} ${orden} LIMIT ${limite}";
         // debuguear($query);
         $resultado = self::consultarSQL($query);
         return $resultado;

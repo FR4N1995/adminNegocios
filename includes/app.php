@@ -1,5 +1,5 @@
 <?php
-
+// echo phpinfo();
 
 
 require  '../vendor/autoload.php';

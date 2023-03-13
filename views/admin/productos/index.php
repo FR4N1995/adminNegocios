@@ -44,7 +44,7 @@
                             <form method="POST" action="/admin/productos/eliminar" class="table__formulario">
                                 <input type="hidden" name="id" value="<?php echo $producto->id; ?>">
                                 <button type="submit" class="table__accion table__accion--eliminar">
-                                    <i class="fa-solid fa-circle-xmark"></i>
+                                <i class="fa-solid fa-trash"></i>
                                     Eliminar
                                 </button>
                             </form>
