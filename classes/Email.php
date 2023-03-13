@@ -196,7 +196,7 @@ class Email{
         <h1>Administra tu Negocio</h1>
         <h2>Hola " . $this->nombre . " </h2>
         <p>Has solicitado Restablecer tu Password, solo debes precionar el siguiente boton</p>
-        <a href=' http://localhost:3000/restablecer?token=" . $this->token . "'><button>Restablecer Password</button></a>
+        <a href='http://localhost:3000/restablecer?token=" . $this->token . "'><button>Restablecer Password</button></a>
         <p>Si tu no solicitaste restablecer tu password ignora el mensaje</p>
         <div><p></p></div>
         <p><span>Este correo electronico fue enviado desde una direccion solamente de notificaciones que no puede aceptar correo electronico entrante. Por favor no respondas a este mensaje.</span></p>
