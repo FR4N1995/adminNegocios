@@ -1,0 +1,70 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.barra{
+    display: none;
+    @include m.tablet{
+        display: block;
+    }
+    background-color: v.$verde;
+    padding: 1rem;
+
+    &__contenido{
+        @include m.contenedor;
+        display: flex;
+        flex-direction: column;
+        @include m.tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center
+        }
+    }
+    &__logo{
+        @include m.logo;
+        @include m.texto-fluido(2rem, 3rem);
+    }
+
+
+}
+
+.movil{
+    display: block;
+    @include m.tablet{
+        display: none;
+    }
+    &__contenedor{
+       
+        color: v.$negro;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: v.$verde;
+    }
+ 
+    &__logo{
+        width: 5rem;
+        margin-left: 3rem;
+    }
+    &__barras{
+        margin-right: 3rem;
+        width: 4rem;
+    }
+
+    &__navegacion{
+        display: flex;
+        flex-direction: column;
+        background-color: v.$verde;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .3s ease-in-out, opacity 0.5s linear, height .5s linear;
+        height: 0;
+    }
+}
+
+.show{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+

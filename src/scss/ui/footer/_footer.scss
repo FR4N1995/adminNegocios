@@ -1,0 +1,61 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.footer{
+    position: absolute;
+    width: 100%;
+    // bottom: 1;
+    
+    background-color: rgb(24, 22, 22);
+    margin-top: 5rem;
+    padding-top: 3rem;
+    color: v.$blanco;
+    @include m.xl_desktop{
+        // position: absolute;
+    }
+
+    &__grid{
+        align-items: center;
+        @include m.contenedor;
+        @include m.tablet{
+            @include m.grid(2, 3rem);
+        }
+    }
+
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include m.tablet{
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+       
+    }
+    
+    &__logo{
+      width: 5rem;
+      
+     
+    }
+
+    &__texto{
+        text-align: center;
+    }
+
+    &__copyright{
+       background-color: darken($color: rgb(24, 22, 22), $amount: 10);
+       display: flex;
+       justify-content: center;
+       gap: 1rem;
+       align-items: center;
+
+        &--imagen{
+           width: 3rem;
+        }
+       
+       
+    }
+}

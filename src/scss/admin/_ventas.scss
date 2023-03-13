@@ -1,0 +1,252 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.producto-registro{
+    
+
+    @include m.desktop{
+        // display: flex;
+        // align-items: flex-start;
+        // gap: 8rem;
+        @include m.grid(2, 4rem);
+    }
+
+    &__heading{
+
+        &--productos{
+            text-align: center;
+        }
+    }
+
+    &--texto{
+        text-align: center;
+    }
+    
+    
+    &--precio{
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+
+    &__listado{
+        font-size: 1rem;
+        @include m.tablet{
+            flex: 0 0 50%
+        }
+    }
+    &--sinproducto{
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    &__grid{
+        @include m.grid(1, 3rem);
+        @include m.tablet{
+            @include m.grid(2, 3rem);
+        }
+        @include m.desktop{
+            @include m.grid(3, 3rem);
+
+        }
+    }
+    &--nombre{
+        margin: 0;
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        
+    }
+
+    &--contenedor{
+        //  background-color: v.$negro;
+        @include m.shadow;
+        @include m.card;
+        border-radius: .8rem;
+        color: v.$negro;
+        text-align: center;
+       
+    }
+    &--autor{
+        width: 5rem;
+        border-radius: 1rem;
+    }
+
+    &--agregar{
+        margin-bottom: 1rem;
+        border: none;
+        display: inline-block;
+        width: 90%;
+        font-weight: 900;
+        font-size: 1.3rem;
+        padding: 1rem 3rem;
+        background-color: #99c6e5;
+        border: none;
+        text-align: center;
+        display: inline-block;
+        transition-property: background-color;
+        transition-duration: .3s;
+        border-radius: .3rem;
+
+       &:disabled {
+        opacity: .9;
+        cursor: not-allowed;
+        background-color: aliceblue;
+       }
+
+       &:hover {
+        background-color: darken( v.$azul, 10% );
+        cursor: pointer;
+        }
+    }
+
+    &--formulario{
+        text-align: center;
+        margin-bottom: .6rem;
+       
+    }
+    &--label{
+        font-weight: 900;
+        font-size: 1.8rem;
+        border-radius: 1rem;
+    }
+    &--input{
+        padding: .8rem 2rem;
+        border: 1px solid;
+        border-radius: .5rem;
+
+
+    }
+
+}
+
+.registro{
+    @include m.tablet{
+        flex: 0 0 40%;
+        //necesarios para que registro se quede estatico
+        position: -webkit-sticky;
+        position: sticky;
+        top: 3rem;
+    
+    }
+
+    &__heading{
+        margin-top: 2rem;
+
+    }
+
+    &__producto{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid black;
+    }
+
+    &__infoProducto{
+
+        &-nombre{
+            text-transform: uppercase;
+            color: v.$negro;
+        }
+        
+        p{
+            margin: 0 0 .5rem 0;
+            font-weight: 500;
+            
+            span{
+                font-weight: 900;
+                
+            }
+        }
+    }
+
+    &__total{
+         margin-top: 2rem;
+         margin-bottom: 0;
+         display: flex;
+         justify-content: end;
+         span{
+            font-weight: 700;
+         }
+    }
+
+    &__eliminar{
+        all: unset;
+        color: v.$rojo;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    
+    &--formulario{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin-top: 1rem;
+
+     }
+     &--label{
+        padding-right: 1rem;
+        &-hora{
+        padding-right: 1.6rem;  
+
+        }
+     }
+     &--input{
+       width: 100%;
+       padding: 1rem;
+            
+     }
+}
+
+//VENTAS TOTALES Lista
+
+.sinVentas{
+    text-align: center;
+}
+
+.totalDia{
+    padding-top: 3rem;
+    display: flex;
+   justify-items: center;
+    justify-content: flex-end;
+
+    font-weight: 900;
+    span{
+        font-weight: 400;
+    }
+}
+
+.ventas{
+    padding: 0;
+    @include m.tablet{
+        @include m.grid(2, 1rem);
+    }
+    @include m.desktop{
+        @include m.grid(3, 1rem);
+    }
+    @include m.xl_desktop{
+        @include m.grid(4, 1rem);
+    }
+   
+    li{
+        list-style: none;
+        border: 1px solid black;
+        border-radius: .5rem;
+        margin-bottom: 1rem;
+        @include m.card;
+        @include m.shadow;
+
+        p{
+            font-weight: 700;
+            
+            span{
+                font-weight: 400;
+            }
+        }
+    }
+}
