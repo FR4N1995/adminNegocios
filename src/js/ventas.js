@@ -180,7 +180,7 @@
             datos.append('hora', hora);
             
 
-            const url = 'http://localhost:3000/admin/ventas';
+            const url = 'https://admindenegocios.com/admin/ventas';
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos

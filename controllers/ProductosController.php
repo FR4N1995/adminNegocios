@@ -27,8 +27,10 @@ class ProductosController
         //$registros_por_pagina = 10;
         $total = Productos::total('usuario_id', $_SESSION['id']);
         //$paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
-        $productos = Productos::all('usuario_id', $_SESSION['id'],);
-        $registroExistente = Registro::wherearray(['usuarioid' => $_SESSION['id'], 'activo' => '1']);
+//        $productos = Productos::all('usuario_id', $_SESSION['id'],);
+//	$productos = Productos::wherearray(['usuarioid' => $_SESSION['id']]);  
+	$productos = Productos::wherearray(['usuario_id' => $_SESSION['id']]);
+      $registroExistente = Registro::wherearray(['usuarioid' => $_SESSION['id'], 'activo' => '1']);
 
         if ($registroExistente) {
             if ($registroExistente[0]->paquete_id === '1' && $total >= 20) {

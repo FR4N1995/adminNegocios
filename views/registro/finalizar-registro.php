@@ -182,14 +182,14 @@
           datos.append('pago_id', orderData.purchase_units[0].payments.captures[0].id);
           datos.append('tiempo_id', 1);
 
-          fetch('http://localhost:3000/finalizar-registro/pagar', {
+          fetch('https://admindenegocios.com/finalizar-registro/pagar', {
               method: 'POST',
               body: datos
             }).then(respuesta => respuesta.json())
             .then(resultado => {
               if (resultado.resultado) {
                 console.log(resultado);
-                actions.redirect('http://localhost:3000/admin/dashboard');
+                actions.redirect('https://admindenegocios.com/admin/dashboard');
               }
 
             })
@@ -233,13 +233,13 @@
           datos.append('pago_id', orderData.purchase_units[0].payments.captures[0].id)
           datos.append('tiempo_id', 1);
 
-          fetch('http://localhost:3000/finalizar-registro/pagar', {
+          fetch('https://admindenegocios.com/finalizar-registro/pagar', {
               method: 'POST',
               body: datos
             }).then(respuesta => respuesta.json())
             .then(resultado => {
               if (resultado.resultado) {
-                actions.redirect('http://localhost:3000/admin/dashboard');
+                actions.redirect('https://admindenegocios.com/admin/dashboard');
               }
             })
 
@@ -282,13 +282,13 @@
           datos.append('pago_id', orderData.purchase_units[0].payments.captures[0].id);
           datos.append('tiempo_id', 1);
 
-          fetch('http://localhost:3000/finalizar-registro/pagar', {
+          fetch('https://admindenegocios.com/finalizar-registro/pagar', {
               method: 'POST',
               body: datos
             }).then(respuesta => respuesta.json())
             .then(resulutado => {
               if (resulutado.resultado) {
-                actions.redirect('http://localhost:3000/admin/dashboard');
+                actions.redirect('https://admindenegocios.com/admin/dashboard');
               }
             })
         });
@@ -331,13 +331,13 @@
           datos.append('pago_id', orderData.purchase_units[0].payments.captures[0].id);
           datos.append('tiempo_id', 2);
 
-          fetch('http://localhost:3000/finalizar-registro/pagar', {
+          fetch('https://admindenegocios.com/finalizar-registro/pagar', {
               method: 'POST',
               body: datos
             }).then(respuesta => respuesta.json())
             .then(resultado => {
               if (resultado.resultado) {
-                actions.redirect('http://localhost:3000/admin/dashboard');
+                actions.redirect('https://admindenegocios.com/admin/dashboard');
               }
             })
 
@@ -382,13 +382,13 @@
           datos.append('pago_id', orderData.purchase_units[0].payments.captures[0].id);
           datos.append('tiempo_id', 2);
 
-          fetch('http://localhost:3000/finalizar-registro/pagar', {
+          fetch('https://admindenegocios.com/finalizar-registro/pagar', {
               method: 'POST',
               body: datos
             }).then(respuesta => respuesta.json())
             .then(resultado => {
               if (resultado.resultado) {
-                actions.redirect('http://localhost:3000/admin/dashboard');
+                actions.redirect('https://admindenegocios.com/admin/dashboard');
               }
             })
         });
@@ -432,13 +432,13 @@
           datos.append('pago_id', orderData.purchase_units[0].payments.captures[0].id);
           datos.append('tiempo_id', 2);
 
-          fetch('http://localhost:3000/finalizar-registro/pagar', {
+          fetch('https://admindenegocios.com/finalizar-registro/pagar', {
               method: 'POST',
               body: datos
             }).then(respuesta => respuesta.json())
             .then(resultado => {
               if (resultado.resultado) {
-                actions.redirect('http://localhost:3000/admin/dashboard');
+                actions.redirect('https://admindenegocios.com/admin/dashboard');
               }
             })
         });

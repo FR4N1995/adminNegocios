@@ -26,8 +26,9 @@ class CitasController{
         // $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
 
         // $citas = Citas::paginarWhere('usuario_id', $_SESSION['id'], $registros_por_pagina, $paginacion->offset());
-        $citas = Citas::all('usuario_id', $_SESSION['id'], $registros_por_pagina);
-        $registroExistente = Registro::wherearray(['usuarioid' => $_SESSION['id'], 'activo' => '1']);
+//        $citas = Citas::all('usuario_id', $_SESSION['id'], $registros_por_pagina);
+	$citas = Citas::wherearray(['usuario_id' => $_SESSION['id']]);  
+      $registroExistente = Registro::wherearray(['usuarioid' => $_SESSION['id'], 'activo' => '1']);
 
         if ($registroExistente) {
             if ($registroExistente[0]->paquete_id === '1' && $total >= 60) {
