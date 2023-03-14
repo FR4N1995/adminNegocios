@@ -69,10 +69,10 @@ class SuperDashboardController
 
         $total = Usuarios::total();
         // debuguear($total);
-        $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
+        //$paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
 
-         $usuarios = Usuarios::paginar($registros_por_pagina, $paginacion->offset());
-        // $usuarios = Usuarios::all();
+         //$usuarios = Usuarios::paginar($registros_por_pagina, $paginacion->offset());
+        $usuarios = Usuarios::all();
         // debuguear($usuarios);
 
         $router->render('superadmin/usuarios/index', [
@@ -81,7 +81,7 @@ class SuperDashboardController
             'admin' => $_SESSION['admin'],
             'superAdmin' => $_SESSION['superadmin'],
             'usuarios' => $usuarios,
-            'paginacion' => $paginacion->paginacion()
+        //    'paginacion' => $paginacion->paginacion()
         ]);
     }
 
@@ -104,10 +104,10 @@ class SuperDashboardController
 
         $total = Registro::total();
 
-        $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
+        //$paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
 
-        $registros = Registro::paginar($registros_por_pagina, $paginacion->offset());
-
+        //$registros = Registro::paginar($registros_por_pagina, $paginacion->offset());
+$registros=Registro::all();
         foreach ($registros as $registro) {
              $registro->paquete = Paquetes::find($registro->paquete_id);
              $registro->usuario = Usuarios::find($registro->usuarioid);
@@ -120,7 +120,7 @@ class SuperDashboardController
             'admin' => $_SESSION['admin'],
             'superAdmin' => $_SESSION['superadmin'],
             'registros' => $registros,
-            'paginacion' => $paginacion->paginacion()
+          //  'paginacion' => $paginacion->paginacion()
         ]);
 
     }
