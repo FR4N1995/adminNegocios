@@ -140,8 +140,11 @@
 </main>
 
 
-<script src="https://www.paypal.com/sdk/js?client-id=AeJtH-gxzTSoECNMVJP4r4KlJmXioq90QhfZfi-ls5MBNWOk61s4RQhjcmcotbardfwjkN2j5xvrcAyx&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+<!-- script de desarrollo de paypal -->
 <!-- <script src="https://www.paypal.com/sdk/js?client-id=AeJtH-gxzTSoECNMVJP4r4KlJmXioq90QhfZfi-ls5MBNWOk61s4RQhjcmcotbardfwjkN2j5xvrcAyx&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script> -->
+<!-- <script src="https://www.paypal.com/sdk/js?client-id=AeJtH-gxzTSoECNMVJP4r4KlJmXioq90QhfZfi-ls5MBNWOk61s4RQhjcmcotbardfwjkN2j5xvrcAyx&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script> -->
+<!-- script real de peypal -->
+<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
 <script>
   function initPayPalButton() {
     paypal.Buttons({
