@@ -72,7 +72,8 @@ class SuperDashboardController
         $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
 
          $usuarios = Usuarios::paginar($registros_por_pagina, $paginacion->offset());
-        // $usuarios = Usuarios::all();
+        //  $usuarios = Usuarios::all();
+       
         // debuguear($usuarios);
 
         $router->render('superadmin/usuarios/index', [

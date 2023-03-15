@@ -29,6 +29,7 @@ class ProductosController
         $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
         $productos = Productos::paginarWhere('usuario_id', $_SESSION['id'], $registros_por_pagina, $paginacion->offset());
         $registroExistente = Registro::wherearray(['usuarioid' => $_SESSION['id'], 'activo' => '1']);
+        // $productos = Productos::wherearray(['usuario_id' => $_SESSION['id']]);
 
         if ($registroExistente) {
             if ($registroExistente[0]->paquete_id === '1' && $total >= 20) {
