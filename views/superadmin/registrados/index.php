@@ -36,9 +36,9 @@
                         <td class="table__td <?php echo ($registro->fecha_final > date('Y-m-d'))? '' : 'table__td--noconfirmacion'; ?>">
                             <?php echo  strftime(" %d %B del %G", strtotime($registro->fecha_final)); ?> 
                         </td>
-                        <td class="table__td--acciones"> 
+                        <td class="table__td--acciones">   
                             <!-- <button class="table__accion table__accion--ver" value="<?php echo $producto->id; ?>" id="ver">
-                                <i class="fa-regular fa-eye"></i>
+                                <i class="fa-regular fa-eye"></i> 
                                 Ver
                             </button>
                             <a class="table__accion table__accion--editar" href="/admin/productos/editar?id=<?php echo $producto->id; ?>">

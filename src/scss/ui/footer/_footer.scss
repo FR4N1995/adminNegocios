@@ -35,14 +35,18 @@
        
     }
     
-    &__logo{
+    &__logo{ 
       width: 5rem;
+     
       
      
     }
 
     &__texto{
-        text-align: center;
+        // text-align: center; 
+        span{
+            font-weight: 700;
+          }    
     }
 
     &__copyright{
@@ -54,7 +58,7 @@
 
         &--imagen{
            width: 3rem;
-        }
+        } 
        
        
     }

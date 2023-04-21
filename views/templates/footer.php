@@ -6,7 +6,7 @@
                 <img class="footer__logo" src="/build/img/avalos murillo-blanco.png" alt="Logo">
             </div>
             <div>
-                <p class="footer__texto">Organiza tu negocio y obten mejores resultados</p>
+                <p class="footer__texto"><span>AdminDeNegocios</span> optimiza procesos empresariales, administracion de negocios, gestión Empresarial, gestion de recursos humanos, etc. </p>
             </div>
         </div>
 
@@ -28,7 +28,7 @@
             </a>
             <a class="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://github.com">
                 <span class="menu-redes__ocultar">Tiktok</span>
-            </a>
+            </a>  
 
         </nav>
 
