@@ -20,12 +20,13 @@ class DashboardController
         //  debuguear($_SESSION);
         $id = $_SESSION['id'];
         $fechaActual = date('Y-m-d');
+        // debuguear($fechaActual);
         //verificar si el usuario ya hizo un registro y fechas limites para que puedan acceder
         //whereArray
         $totalempleados = Empleados::total('id_usuario', $id);
         $totalProductos = Productos::total('usuario_id', $id);
         $registro = Registro::wherearray(['usuarioid' => $id, 'activo' => '1']);
-
+        // debuguear([$registro[0]->fecha_final, $fechaActual]);
          if (!$registro || $fechaActual > $registro[0]->fecha_final || $registro[0]->activo === '0') {
              header('Location: /finalizar-registro');
          }

@@ -10,6 +10,8 @@
                     <th scope="col" class="table__th">Paquete</th>
                     <th scope="col" class="table__th">Mensual/Anual</th>
                     <th scope="col" class="table__th">Estado</th>
+                    <th scope="col" class="table__th">Fecha Inicio</th>
+                    <th scope="col" class="table__th">Fecha Final</th>
                     <th scope="col" class="table__th">Acciones</th>
                 </tr>
             </thead>
@@ -28,7 +30,13 @@
                         <td class="table__td <?php echo ($registro->activo) === '1' ? 'table__td--confirmacion' : 'table__td--noconfirmacion';?>">
                             <?php echo ($registro->activo) === '1' ? 'Activo' : 'No Activo'; ?>
                         </td>
-                        <td class="table__td--acciones">
+                        <td class="table__td">
+                            <?php echo  strftime(" %d %B del %G", strtotime($registro->fecha_inicio)); ?>
+                        </td>
+                        <td class="table__td <?php echo ($registro->fecha_final > date('Y-m-d'))? '' : 'table__td--noconfirmacion'; ?>">
+                            <?php echo  strftime(" %d %B del %G", strtotime($registro->fecha_final)); ?> 
+                        </td>
+                        <td class="table__td--acciones"> 
                             <!-- <button class="table__accion table__accion--ver" value="<?php echo $producto->id; ?>" id="ver">
                                 <i class="fa-regular fa-eye"></i>
                                 Ver
