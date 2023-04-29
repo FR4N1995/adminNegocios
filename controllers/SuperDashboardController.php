@@ -113,7 +113,7 @@ $registros=Registro::all();
              $registro->usuario = Usuarios::find($registro->usuarioid);
              $registro->tiempo = Tiempo::find($registro->tiempo_id);
         }
-        // debuguear($registros);
+        //  debuguear($registros);
         $router->render('superadmin/registrados/index', [
             'titulo' => 'Registrados de algun paquete',
             'nombre' => $_SESSION['nombre'],
