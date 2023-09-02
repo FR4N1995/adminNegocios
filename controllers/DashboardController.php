@@ -19,7 +19,7 @@ class DashboardController
         }
         //  debuguear($_SESSION);
         $id = $_SESSION['id'];
-        $fechaActual = date('Y-m-d');
+        $fechaActual = date('2023-09-20');
         // debuguear($fechaActual);
         //verificar si el usuario ya hizo un registro y fechas limites para que puedan acceder
         //whereArray

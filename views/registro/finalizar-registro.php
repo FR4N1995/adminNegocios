@@ -3,8 +3,8 @@
   <h2 class="registro__heading"><?php echo $titulo; ?></h2>
   <p class="registro__descripcion">Compara los paquetes y adquiere el que se acople mejor a tus necesidades</p>
 
-  <div class="registro__contenedorFreeDays">
-      <a href="/finalizar-registro/freedays">15 Dias de prueba</a>
+  <div class="registro__contenedorFreeDays <?php echo ($bandera === true) ? 'btondisablet' : '';?>">
+      <a class="<?php echo ($bandera === true) ? 'btondisablet' : '';?>"  href="/finalizar-registro/freedays">15 Dias de prueba</a>
   </div>
 
   <nav class="paquetes__tabs">
