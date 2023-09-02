@@ -180,6 +180,31 @@
         }
     }
 
+    &__contenedorFreeDays{
+        @include m.contenedor-sm;
+        text-align: center;
+        padding: 1.5rem 4rem;
+        margin-bottom: 2rem;
+
+       a{
+        background-color: v.$azul;
+        border: none;
+        color: v.$blanco;
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: v.$bold;
+        transition: background-color 300ms ease;
+
+        &:hover{
+            cursor: pointer;
+            background-color: darken($color: v.$azul, $amount: 10%);
+        }
+       }
+    }
+
     
     &--formulario{
         display: flex;
@@ -201,6 +226,7 @@
        padding: 1rem;
             
      }
+
 }
 
 //VENTAS TOTALES Lista

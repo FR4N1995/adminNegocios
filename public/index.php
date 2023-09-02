@@ -44,6 +44,8 @@ $router->get('/confirmar', [AuthController::class, 'confirmar']);
 //Registro de usuarios
 $router->get('/finalizar-registro', [RegistroController::class, 'verificar']);
 $router->post('/finalizar-registro/pagar', [RegistroController::class, 'pagar']);
+$router->post('/finalizar-registro/freedays', [RegistroController::class, 'freeDays']);
+$router->get('/finalizar-registro/freedays', [RegistroController::class, 'freeDays']);
 
 //Paginas publicas
 $router->get('/', [PaginasController::class, 'index']);

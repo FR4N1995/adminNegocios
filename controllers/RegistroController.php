@@ -94,4 +94,12 @@ class RegistroController
             }
         }
     }
+
+    public static function freeDays(){
+        if (!isAuth()) {
+            header('Location: /');
+        }
+        //TODO: aqui vamos a insertar el registro manualmente para que pase en el controlador de dashboard
+
+    }
 }
