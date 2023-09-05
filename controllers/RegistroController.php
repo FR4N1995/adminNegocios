@@ -13,7 +13,7 @@ class RegistroController
         if (!isAuth()) {
             header('Location: /');
         }
-        $fechaActual = date('2023-09-20');
+        $fechaActual = date('Y-m-d');
         $bandera = false;
         //Aqui aremos al verificacion de que exista un registro(pago)
         //tambien 
