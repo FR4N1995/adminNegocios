@@ -328,6 +328,13 @@ class ActiveRecord{
         return $resultado;
 
     }
+
+    public static function SQLinsert($consulta){
+        $query = $consulta;
+        $resultado = self::$db->query($query);
+        return $resultado;
+
+    }
  
      public static function consultarSQL($query){
              //consultar la base de datos
