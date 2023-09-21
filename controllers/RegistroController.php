@@ -101,6 +101,7 @@ class RegistroController
         }
     }
 
+    
     public static function freeDays(Router $router){
         if (!isAuth()) {
             header('Location: /');
