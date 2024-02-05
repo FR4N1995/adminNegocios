@@ -3,6 +3,8 @@ session_start();
 ?>
 <?php
 //var_dump(gd_info());
+
+
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\ApiController;

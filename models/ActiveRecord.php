@@ -368,7 +368,7 @@ class ActiveRecord{
                  $this->$key = $value;
              }
          }
-         //  return $args;
+           return $args;
       }
  
     

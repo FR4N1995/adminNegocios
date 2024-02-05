@@ -42,11 +42,32 @@ class Usuarios extends ActiveRecord{
         if(!$this->nombre){
             self::$errores['error'][]= 'El nombre es obligatorio';
         }
+        if(!preg_match("/^[a-zA-Z'-]+$/", $this->nombre)){
+            self::$errores['error'][]= 'El nombre contiene caracteres inválidos';
+        }
+        if(strlen($this->nombre) > 15){
+            self::$errores['error'][]= 'El nombre es demaciado grande, Escribe solo uno';
+        }
+        if(strlen($this->nombre)< 3){
+            self::$errores['error'][]= 'El nombre es demaciado Corto';
+        }
         if(!$this->apellido){
             self::$errores['error'][]= 'debes ingresar al menos un Apellido';
         }
+        if(!preg_match("/^[a-zA-Z'-]+$/", $this->apellido)){
+            self::$errores['error'][]= 'los Apellidos contienen caracteres inválidos';
+        }
+        if(strlen($this->apellido) > 18){
+            self::$errores['error'][]= 'Solo escribe un apellido';
+        }
+        if(strlen($this->apellido) < 3){
+            self::$errores['error'][]= 'Escribe un apellido valido';
+        }
         if(!$this->email){
             self::$errores['error'][]= 'El email es obligatorio';
+        }
+        if (!preg_match('/^[a-z][^@]*@(([a-z][a-z0-9-]+)\.){0,3}(?2)$/', $this->email)) {
+            self::$errores['error'][]= 'Escribe un correo Valido';
         }
         if(!$this->password){
             self::$errores['error'][]= 'El password no debe ir vacio';
