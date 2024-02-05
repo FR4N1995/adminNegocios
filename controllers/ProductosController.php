@@ -82,7 +82,7 @@ class ProductosController
                 $carpeta_imagenes = '../public/img/products';
                 //Creamos la carpeta si no existe
                 if (!is_dir($carpeta_imagenes)) {
-                    mkdir($carpeta_imagenes, 0755, true);
+                    mkdir($carpeta_imagenes, 0777, true);
                 }
 
                 $imagen_png = Image::make($_FILES['imagen']['tmp_name'])->fit(800, 800)->encode('png', 80);
@@ -98,6 +98,7 @@ class ProductosController
             $productos->sincronizar($_POST);
 
             $alertas = $productos->validar();
+	    //debuguear($productos);
 
             if (empty($alertas)) {
                 //guardar las imagenes

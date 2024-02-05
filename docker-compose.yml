@@ -45,6 +45,7 @@ services:
       - /certs:/etc/nginx/certs:ro
       - /etc/nginx/vhost.d
       - /usr/share/nginx/html
+      - ./docker-compose/nginx-proxy/my_proxy.conf:/etc/nginx/conf.d/my_proxy.conf:ro
     networks:
       - travellist
     labels:
